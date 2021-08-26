@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>All category</title>
+  </head>
+  <body>
+    <div class="table-data">
+      <h2>All category</h2>
+      <table border="1" cellspacing="0">
+        <tr>
+          <th>Category</th>
+          <th>action</th>
+        </tr>
+
+        <% if(userData.length!=0){ var i=1; userData.forEach(function(data){ %>
+        <tr>
+          <td><%=data.category %></td>
+          <td><a href="/category/category/<%=data.catId%>">show</a></td>
+        </tr>
+        <% i++; }) %> <% } else{ %>
+        <tr>
+          <td colspan="7">No Data Found</td>
+        </tr>
+        <% } %>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fetch ALL product</title>
+</head>
+<body>
+    <div class="table-data">
+<h2>All products in selected category</h2>
+    <table border="1" cellspacing="0">
+        <tr>
+            <th>category</th>
+            <th>Brand</th>
+            <th>Product Name</th>
+        </tr>
+        
+        <%
+        if(userData.length!=0){
+        userData.forEach(data=>{
+        %>
+        <tr>
+            
+            <td><%=data.category %></td>
+            <td><%=data.brand %></td>
+            <td><%=data.productName %></td>
+            
+        </tr>
+        <%  }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+    </table>
+    </div>
+</body>
+</html>
